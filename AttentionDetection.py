@@ -81,12 +81,13 @@ color = (0, 0, 255)
 
 #capture video
 #cap = cv2.VideoCapture(0) #use this line if capture video from a webcam
-cap = cv2.VideoCapture("videofile.mp4") #use this line to read a video file in the same directory as this python script
+cap = cv2.VideoCapture("video01.mp4") #use this line to read a video file
 while cap.isOpened():
     success, image = cap.read()
     if not success:
         print("Ignoring empty camera frame.")
-        continue
+        #continue #use this line for webcam capture
+        break #use this line if video file read
     image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
     image.flags.writeable = False
 
@@ -111,7 +112,7 @@ while cap.isOpened():
             mp_drawing.draw_landmarks(
                 image=image,
                 landmark_list=face_landmarks,
-                connections=mp_face_mesh.FACE_CONNECTIONS,
+                connections=mp_face_mesh.FACEMESH_CONTOURS,
                 landmark_drawing_spec=drawing_spec,
                 connection_drawing_spec=drawing_spec)
 
