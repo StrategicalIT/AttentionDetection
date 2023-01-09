@@ -80,7 +80,8 @@ frame_before_run = 0
 color = (0, 0, 255)
 
 #capture video
-cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(0) #use this line if capture video from a webcam
+cap = cv2.VideoCapture("videofile.mp4") #use this line to read a video file in the same directory as this python script
 while cap.isOpened():
     success, image = cap.read()
     if not success:
