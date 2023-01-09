@@ -1,2 +1,3 @@
-# StudentAttentionDetection
-This is my entry into Young ICT Explorers 2021
+# AttentionDetection
+Big thanks to Akhilkuchibhotla for the original code
+Changes made to fix some syntax errors in AttentionDetection.py
