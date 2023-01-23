@@ -1,2 +1,2 @@
 cd C:\Users\Demo\Documents\AttentionDetection
-python AttentionDetection
+python AttentionDetection.py
